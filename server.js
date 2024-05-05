@@ -13,7 +13,7 @@ app.use(express.static(publicPath));
 
 app.use((req, res) => {
     res.status(404);
-    res.sendFile(join(__dirname, publicPath, "404.html")); // change to your 404 page
+    res.sendFile(join(__dirname, publicPath, "index.html")); // change to your 404 page
 });
 
 const server = createServer();
@@ -41,7 +41,7 @@ if (isNaN(port)) port = 8080; // set your port
 server.on("listening", () => {
     const address = server.address();
     console.log("Listening on:");
-    console.log(`\thttp://localhost:${address.port}`);
+    console.log(`\thttp://localhost:8080`);
     console.log(
         `\thttp://${
             address.family === "IPv6" ? `[${address.address}]` : address.address
