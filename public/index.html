@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="/uv/uv.bundle.js"></script>
-        <script src="/uv/uv.config.js"></script>
+ <head>
+  <script src="/uv/uv.bundle.js"></script>
+  <script src="/uv/uv.config.js"></script>
 
-        <script>
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", () => {
-                navigator.serviceWorker.register("/uv/sw.js", {
-                    scope: __uv$config.prefix,
-                });
-            });
-        }
-        </script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/uv/sw.js", {
+        scope: __uv$config.prefix,
+      });
+    });
+  }
+</script>
+   <link rel="stylesheet" type="text/css" href="mystyle.css">
+   <title>Hello, world!</title>
+ </head>
 
-        <link rel="stylesheet" href="example.css">
-    </head>
-    <body>
-        <input type="text" id="urlInput" placeholder="Enter URL here">
-        <button id="searchButton">Search Text</button>
+<body>
+    
+    <div class="header">
+      Made by NoChar4Char42
+    </div>
+    <div class="interaction">
+       <iframe id="iframeWindow" class="iframeWindow"></iframe>
 
-        <iframe id="iframeWindow" class="iframeWindow"></iframe>
-    </body>
-    <script src="example.js"></script>
+
+       <input type="text" id="urlInput" placeholder="Enter URL here">
+       <button id="searchButton">Search Text</button>
+    </div>
+
+    <img src="https://ibb.co/CBb7zgP" alt="balloon">
+
+ </body>
+
 </html>
